@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style>
+
+.header {
+    width: 100%;
+    height: 90px;
+    background-color:#536878 ;
+    color:white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+.footer {
+    
+    height: 65px;
+    background-color:#2b363e;
+    color: white;
+    position: relative;
+  }
+  .social-media{
+    font-size: 35px;
+    color: #777;
+    background: #ede3f7;
+    display:flex;
+    justify-content: center;
+    
+}
+
+a1{ /*outside button*/
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0.01);
+    transition: 0.1s all;
+}
+
+a1 i1{
+  transition: 0.1s all;
+}
+
+a1:hover i1{/*inside icons move*/
+    transform: scale(0.80);
+}
+a1:hover .fa-facebook{
+    color: blue;
+}
+a1:hover .fa-whatsapp{
+    color: green;
+}
+a1:hover .fa-instagram{
+    color:crimson
+}
+a1:hover .fa-twitter{
+    color: skyblue
+}
+a1:hover .fa-linkedin{
+    color: blue
+}
+
+.row {
+    width: 100%;
+	max-width: 1200px;
+	margin: 0px auto;
+    justify-content: center;
+    display: flex;
+    padding: 0 8px;
+}
+
+.row img:hover { 
+			filter: drop-shadow(4px 4px 6px gray); 
+			transform: scale(1.03); 
+            transition: 0.5s; 
+		}
+
+
+.column {
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  margin-left: 6px;
+  
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*Hover effect for dropdown menu*/
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu {  
+        display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  
+    }
+	.navbar .nav-item:hover .nav-link { 
+        color: #fff;  
+    }
+	.navbar .dropdown-menu.fade-down { 
+        top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; 
+    }
+	.navbar .dropdown-menu.fade-up { 
+        top:180%;  
+    }
+	.navbar .nav-item:hover .dropdown-menu { 
+        transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); 
+    }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+img {
+  border-radius: 20px;
+}
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">DIY</span>
+      </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gallery
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Create</a>
+                <a class="dropdown-item" href="#">Order</a>
+              </div>
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-sm btn-outline-secondary" type="button">Search</button>
+          </form>
+        </div>
+      </nav>
+      <!---------------------------------------------------------------------------navbar end-------------------------------------------------------------------------->
+     <br><br><br>
+      <div class="header">
+        <h1><u><b>GALLERY</b></u></h1>
+      </div><br>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+    <div class="column">
+      <img src="1.jpg" style="width:100%" alt = "tree" >
+      <img src="2.jpg" style="width:100%" alt = "clouds" >
+      
+    </div>
+      
+    <div class="column">
+      <img src="3.jpg" style="width:100%" alt = "butterfly">
+      <img src="4.jpg" style="width:100%" alt = "canopy">
+      
+  </div> 
+      
+   <div class="column">
+      
+      <img src="5.jpg" style="width:100%" alt = "jasmine">
+      <img src="6.jpg" style="width:100%" alt = "white flower">
+    
+    </div>  
+   
+   <div class="column">
+      <img src="7.jpg" style="width:100%" alt = "yellow plant">
+      <img src="8.jpg" style="width:100%" alt = "scene">
+      
+      
+    </div>
+  </div>
+
+ <!---------------------------------------------------------------------------footer-------------------------------------------------------------------------->
+<!-- About Section -->
+<div class="w3-container" style="padding:50px 5px" id="about">
+  <h2 class="w3-center">ABOUT ME</h2>
+  <h6 class="w3-center">Portfolio</h6>
+  <div class="w3-center" >
+			<img src="PIC.jpg" style="width:250px" height="250px" alt = "DP" alt="Avatar" class="avatar">
+  </div>
+  <h2 class="w3-center">Gauri V Alle</h2>
+  <h4 class="w3-center">Student</h4>
+  
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-user-circle w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Personal Profile</p>
+      <p><p>I am Gauri V Alle<br>
+    I am 3<sup>rd</sup> year graduate student in Chemical engineering studying at SDM college of Engineering and Technology.<br>
+    </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Key Skills</p>
+    
+          Analytical chemist<br>
+          Environmental engineer<br>
+					Materials engineer<br>
+					Production manager<br>
+					Guitarist<br>
+					Music Composer<br>
+					
+
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-university w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Education</p>
+      <p><u>School</u><br>(10<sup>th</sup> Std Cbse)<br>KV, Hospet<br><br>
+          <u>College</u><br>(11<sup>th</sup> and 12<sup>th</sup>)<br>KV, Hyderabad<br><br>
+         <u>University</u><br>(Chemical Branch)<br>SDM College of Engineering and Technology
+        
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-envelope w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p><i></i> Dharwad,India<br>
+        <i></i> Phone: +91 9988776655<br>
+        <i></i>Email:abc123@gmail.com<br></p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+
+<div align="center" id="contact">
+    
+<p1><em><b>Did you like the page!</b></em></p1><br>
+<label class="radio-inline"><input type="radio" name="optradio" checked>Yes</label>
+<label class="radio-inline"><input type="radio" name="optradio">No</label>
+<br><br>
+    
+  <p1><em><b>I'd love your feedback!</b></em></p1><br>
+  <p1><b>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</b></p1>
+    <form action="/action_page.php">
+        <div>
+          <div><br>
+            <input type="text" placeholder="Name" required name="Name">
+          </div>
+          <div >
+            <input type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input type="text" placeholder="Message" required name="Message"><br><br>
+        <button type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+<br>
+<br>
+<!----------------------------------------------------------------------------------->
+    <div class="footer">
+      <center>
+      <br>
+      <p style="color:white";><b>Follow Us</b></p>
+      <br>
+    </center>
+    </div>
+    <div class="social-media">     
+        <a1 href="https://www.facebook.com/"><i1 class="fab fa-facebook"></i1></a1>
+        <a1 href="https://www.whatsapp.com/"><i1 class="fab fa-whatsapp"></i1></a1>
+        <a1 href="https://www.instagram.com/?hl=en"><i1 class="fab fa-instagram"></i1></a1>
+        <a1 href="https://twitter.com/?lang=en"><i1 class="fab fa-twitter"></i1></a1>
+        <a1 href="https://www.linkedin.com/"><i1 class="fab fa-linkedin"></i1></a1>
+        
+      </div>
+      <footer>
+            <div class="container">
+                <center>
+                    <p style="font-size: 10px;">Copyright &copy; Website Designer. All Rights Reserved  |  Contact Us: +91 90000 00000</p>	
+                </center>
+            </div>
+        </footer>
+
+</body>
+</html>
